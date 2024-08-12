@@ -24,15 +24,30 @@ const queryClient = new QueryClient({
   },
 });
 
-const ErrorFallback = ({ error }) => (
+const ErrorFallback = ({ error, resetErrorBoundary }) => (
   <div className="container mx-auto px-4 py-20 text-center">
     <h1 className="text-2xl font-bold mb-4">Oops! Something went wrong.</h1>
-    <pre className="text-red-500">{error.message}</pre>
+    <pre className="text-red-500 mb-4">{error.message}</pre>
+    <button
+      onClick={resetErrorBoundary}
+      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Try again
+    </button>
   </div>
 );
 
 const App = () => (
-  <ErrorBoundary FallbackComponent={ErrorFallback} onError={(error) => console.error("Error caught by boundary:", error)}>
+  <ErrorBoundary
+    FallbackComponent={ErrorFallback}
+    onReset={() => {
+      // Reset the state of your app so the error doesn't happen again
+    }}
+    onError={(error, info) => {
+      // Log the error to an error reporting service
+      console.error("Error caught by boundary:", error, info);
+    }}
+  >
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
