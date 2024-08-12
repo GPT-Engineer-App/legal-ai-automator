@@ -40,14 +40,6 @@ const Index = () => {
           <Button size="lg">Request Demo</Button>
           <Button size="lg" variant="outline">Learn More</Button>
         </div>
-        <div className="mt-12">
-          <p className="text-sm text-gray-600 mb-2">Backed by</p>
-          <div className="flex justify-center items-center gap-8">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" alt="Y Combinator" className="h-20 w-20 object-contain" />
-            <img src="https://media.licdn.com/dms/image/D4E0BAQFHrNAl61K7iQ/company-logo_200_200/0/1684868522616/benchmark_vc_logo?e=2147483647&v=beta&t=vA2A5YxjXImFIu07NP2oINLHbuB-Y8PAs1zdhI1l2Mk" alt="Benchmark" className="h-20 w-20 object-contain" />
-            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/redpoint_logo_icon_168868.png" alt="Redpoint" className="h-20 w-20 object-contain" />
-          </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -68,6 +60,16 @@ const Index = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Backed By Section */}
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-2xl font-bold text-center mb-8">Backed by</h2>
+        <div className="flex justify-center items-center gap-8">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" alt="Y Combinator" className="h-20 w-20 object-contain" />
+          <img src="https://media.licdn.com/dms/image/D4E0BAQFHrNAl61K7iQ/company-logo_200_200/0/1684868522616/benchmark_vc_logo?e=2147483647&v=beta&t=vA2A5YxjXImFIu07NP2oINLHbuB-Y8PAs1zdhI1l2Mk" alt="Benchmark" className="h-20 w-20 object-contain" />
+          <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/redpoint_logo_icon_168868.png" alt="Redpoint" className="h-20 w-20 object-contain" />
         </div>
       </section>
 
