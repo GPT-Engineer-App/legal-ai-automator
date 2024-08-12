@@ -20,7 +20,11 @@ const Index = () => {
       }
     }
 
-    fetchData()
+    fetchData().catch(err => {
+      console.error("Unhandled promise rejection:", err)
+      setError("An unexpected error occurred. Please try again.")
+      toast.error("An unexpected error occurred. Please refresh the page.")
+    })
   }, [])
 
   if (error) {
