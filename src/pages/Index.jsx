@@ -16,9 +16,9 @@ const Index = () => {
         <div className="mt-12">
           <p className="text-sm text-gray-600 mb-2">Backed by</p>
           <div className="flex justify-center items-center gap-8">
-            <img src="/placeholder.svg" alt="Y Combinator" className="h-8" />
-            <img src="/placeholder.svg" alt="Benchmark" className="h-8" />
-            <img src="/placeholder.svg" alt="Redpoint" className="h-8" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" alt="Y Combinator" className="h-8" />
+            <img src="https://media.licdn.com/dms/image/D4E0BAQFHrNAl61K7iQ/company-logo_200_200/0/1684868522616/benchmark_vc_logo?e=2147483647&v=beta&t=vA2A5YxjXImFIu07NP2oINLHbuB-Y8PAs1zdhI1l2Mk" alt="Benchmark" className="h-8" />
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/redpoint_logo_icon_168868.png" alt="Redpoint" className="h-8" />
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ const Index = () => {
               {[
                 "Accepted into Y Combinator",
                 "Backed by top-tier investors",
-                "Collaborating with Mannheimer Swartling"
+                "Collaborating with most top legal firms around Europe"
               ].map((achievement, index) => (
                 <li key={index} className="flex items-center">
                   <CheckCircle className="text-green-500 mr-2" />
