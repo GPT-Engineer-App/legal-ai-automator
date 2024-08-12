@@ -1,8 +1,31 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, CheckCircle } from "lucide-react"
+import { useState, useEffect } from "react"
+import { toast } from "sonner"
 
 const Index = () => {
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Simulating an API call or any asynchronous operation
+        // Replace this with your actual data fetching logic
+        await new Promise(resolve => setTimeout(resolve, 1000))
+      } catch (err) {
+        console.error("Error fetching data:", err)
+        setError("An error occurred while loading the page. Please try again.")
+        toast.error("Failed to load data. Please refresh the page.")
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  if (error) {
+    return <div className="container mx-auto px-4 py-20 text-center text-red-500">{error}</div>
+  }
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
       {/* Hero Section */}
